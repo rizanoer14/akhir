@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="64186044-cbcc-42aa-bd5f-802531589b85">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6FFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6FFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="karyawan" uuid="140846de-ac22-4577-a8a4-8b6932fa7664">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     datakaryawan.`id_karyawan` AS datakaryawan_id_karyawan,
+     datakaryawan.`nm_karyawan` AS datakaryawan_nm_karyawan,
+     datakaryawan.`notelp` AS datakaryawan_notelp,
+     datakaryawan.`alamat` AS datakaryawan_alamat
+FROM
+     `datakaryawan` datakaryawan]]>
+		</queryString>
+		<field name="datakaryawan_id_karyawan" class="java.lang.String"/>
+		<field name="datakaryawan_nm_karyawan" class="java.lang.String"/>
+		<field name="datakaryawan_notelp" class="java.lang.String"/>
+		<field name="datakaryawan_alamat" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     datakaryawan.`id_karyawan` AS datakaryawan_id_karyawan,
+     datakaryawan.`nm_karyawan` AS datakaryawan_nm_karyawan,
+     datakaryawan.`notelp` AS datakaryawan_notelp,
+     datakaryawan.`alamat` AS datakaryawan_alamat
+FROM
+     `datakaryawan` datakaryawan]]>
+	</queryString>
+	<field name="datakaryawan_id_karyawan" class="java.lang.String"/>
+	<field name="datakaryawan_nm_karyawan" class="java.lang.String"/>
+	<field name="datakaryawan_notelp" class="java.lang.String"/>
+	<field name="datakaryawan_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="45" width="555" height="12" uuid="a75ad8cf-24a8-4dd0-a62e-42f7ee5b10ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="8" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Telp : 087887243889 Web Blog : https://asia-accessories-hp.business.site/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="33" width="555" height="12" uuid="14cfb054-5bd4-4fa4-871c-b7581f537fea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[JAKARTA TIMUR - DKI JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="555" height="12" uuid="819a35bc-5c18-4542-b5cf-4b9f0a2aa5d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jl. Batu Ampar 1 No.3 RT.11/RW.2, Batu Ampar, Kramatjati]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="21" uuid="d48be95b-cfcf-4e3d-b92a-14e091312264"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASIA ACCESSORIES HP]]></text>
+			</staticText>
+			<image>
+				<reportElement x="430" y="-25" width="106" height="109" uuid="79c646aa-ba59-424b-b038-9a9b6c1bfd93"/>
+				<imageExpression><![CDATA["D:\\Tugas\\Skripsi\\Aplikasi\\skripsi-master\\Aksesoris_HP\\src\\gambar\\Logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="554" height="29" uuid="97586602-f872-4087-96b0-342c1f672624"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA KARYAWAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="69" height="20" uuid="479adc25-909e-427e-bfa3-a03a8eddb2c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="0" width="228" height="20" uuid="110a9696-8ebe-4479-b416-32f15b238834"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="0" width="138" height="20" uuid="67730310-88b7-4bf1-9315-1e13670a5c49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="0" width="120" height="20" uuid="46d616f3-6c92-4eae-bef4-7a0ac45e0af8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No. Telepon]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="20" width="554" height="1" uuid="efa43400-c0f1-4f5b-af9e-1a6fb542408a"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="69" height="20" uuid="0f68e13c-e2ae-4a99-a06c-556edd072ef5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_id_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="0" width="228" height="20" uuid="fc83e030-8e41-4e2c-b0bb-b97940b0a1c3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="0" width="138" height="20" uuid="d06aed9d-7903-43aa-9e26-cbac8b543779"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_nm_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="0" width="120" height="20" uuid="f91751e7-8da2-4bf8-b5e0-ddc9bc1f66d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_notelp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="11" width="100" height="20" uuid="5e1483e0-6c7c-4f21-b998-868a94919f63"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="355" y="11" width="100" height="20" uuid="ec5ab7a2-7959-4688-920e-6d04c54c73cb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[Jakarta, ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

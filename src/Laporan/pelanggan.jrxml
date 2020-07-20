@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f718d604-4e83-4c72-8394-6d2e0e03d25d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     datapelanggan.`id_pelanggan` AS datapelanggan_id_pelanggan,
+     datapelanggan.`nm_pelanggan` AS datapelanggan_nm_pelanggan,
+     datapelanggan.`notelp` AS datapelanggan_notelp
+FROM
+     `datapelanggan` datapelanggan]]>
+	</queryString>
+	<field name="datapelanggan_id_pelanggan" class="java.lang.String"/>
+	<field name="datapelanggan_nm_pelanggan" class="java.lang.String"/>
+	<field name="datapelanggan_notelp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="33" width="555" height="12" uuid="11e02f13-13ca-4e83-a979-bd16531795a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[JAKARTA TIMUR - DKI JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="555" height="12" uuid="27233be0-822e-4b20-be68-e76223d877ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="8" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Email : 087887243889 Web Blog : https://asia-accessories-hp.business.site/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="555" height="12" uuid="3ea8041c-3ac7-4bbf-bd67-a716fb17cefc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jl. Batu Ampar 1 No.3 RT.11/RW.2, Batu Ampar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="21" uuid="9c580d7d-ad5c-4a0c-b50e-a84fde75e2d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASIA ACCESSORIES HP]]></text>
+			</staticText>
+			<image>
+				<reportElement x="436" y="-21" width="108" height="101" uuid="37e5892f-6af7-422f-ae23-2037e9e3990a"/>
+				<imageExpression><![CDATA["D:\\Tugas\\Skripsi\\Aplikasi\\skripsi-master\\Aksesoris_HP\\src\\gambar\\Logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="554" height="29" uuid="d8c04bea-bfa0-4c52-9a3e-fd41ed9fa800"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PELANGGAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="70c957c1-19a7-4d5f-9b73-c5b2211dbf2d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="e5f9d7d3-d180-4262-8cd2-9106ae39f28b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" uuid="571caeb9-1728-4ab4-b7e2-189d3bd4e165"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No. Telepon]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="19" width="554" height="1" uuid="0da046c6-0d4c-4988-aa3d-d0d681e88d0a"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="7e60b603-8c03-4bd3-8696-9461ac002f2c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapelanggan_id_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="28edc0e0-2d23-4196-b61d-063084094183"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapelanggan_nm_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="b7d074e1-94b7-4de9-b7e6-940c5dbd5317"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapelanggan_notelp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="454" y="13" width="100" height="20" uuid="8ffe34bc-3ca6-4402-bad2-8180f23d18ef"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="354" y="13" width="100" height="20" uuid="6e7842dc-efc9-4491-89b0-62d0967994a3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[Jakarta, ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
