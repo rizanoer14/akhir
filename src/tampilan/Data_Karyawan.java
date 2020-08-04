@@ -264,7 +264,7 @@ public class Data_Karyawan extends javax.swing.JFrame {
         telp.setForeground(new java.awt.Color(255, 255, 255));
         PanelGambar.add(telp, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 130, 20));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Card.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/Card.jpg"))); // NOI18N
         PanelGambar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 376, 224));
 
         jPanel1.add(PanelGambar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, 382, 230));
@@ -611,7 +611,19 @@ public class Data_Karyawan extends javax.swing.JFrame {
     }//GEN-LAST:event_tbldataMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Map param = new HashMap();
+        param.put("nama", nm.getText());
+        try {
+                File x = new File("src/Laporan/kartu.jrxml");
+                JasperReport y = JasperCompileManager.compileReport(x.getAbsolutePath());
+                JasperPrint jasperPrint = JasperFillManager.fillReport(y, param, conn);
+                JasperViewer jv = new JasperViewer(jasperPrint, false);
+                jv.setTitle("Nota Transaksi ");
+                jv.setVisible(true);
+            }
+            catch(Exception z) {
+                javax.swing.JOptionPane.showMessageDialog(rootPane, "Gagal Menampilkan Laporan"+z);
+            }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void barangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barangActionPerformed

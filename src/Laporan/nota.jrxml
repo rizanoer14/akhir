@@ -6,6 +6,9 @@
 	<parameter name="no" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="nama" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT
      transaksi_jual.`nomor` AS transaksi_jual_nomor,
@@ -28,7 +31,7 @@ FROM
      `datapelanggan` datapelanggan INNER JOIN `transaksi_jual` transaksi_jual ON datapelanggan.`id_pelanggan` = transaksi_jual.`id_pelanggan`
      INNER JOIN `databarang` databarang ON transaksi_jual.`kd_barang` = databarang.`kd_barang`
 WHERE
-nomor = $P{no}]]>
+nomor = $P{no} AND nm_pelanggan = $P{nama}]]>
 	</queryString>
 	<field name="transaksi_jual_nomor" class="java.lang.String"/>
 	<field name="transaksi_jual_kd_barang" class="java.lang.String"/>

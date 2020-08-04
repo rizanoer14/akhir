@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="382" pageHeight="230" orientation="Landscape" columnWidth="382" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="de7a2685-c9dd-467b-87c1-d4d068d5bbb9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nama" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     datakaryawan.`id_karyawan` AS datakaryawan_id_karyawan,
+     datakaryawan.`nm_karyawan` AS datakaryawan_nm_karyawan,
+     datakaryawan.`notelp` AS datakaryawan_notelp,
+     datakaryawan.`alamat` AS datakaryawan_alamat
+FROM
+     `datakaryawan` datakaryawan
+WHERE nm_karyawan = $P{nama}]]>
+	</queryString>
+	<field name="datakaryawan_id_karyawan" class="java.lang.String"/>
+	<field name="datakaryawan_nm_karyawan" class="java.lang.String"/>
+	<field name="datakaryawan_notelp" class="java.lang.String"/>
+	<field name="datakaryawan_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="230">
+			<image>
+				<reportElement x="0" y="0" width="382" height="230" uuid="eb1fed3f-bbdf-473a-86b4-8e8c4c8adda1"/>
+				<imageExpression><![CDATA["D:\\Tugas\\Skripsi\\Aplikasi\\Aksesoris_HP\\src\\gambar\\Card.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="49" y="102" width="56" height="20" forecolor="#FFFFFF" uuid="44c48018-8d4d-4c48-97d3-a5cfa7d679cc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Malgun Gothic Semilight" size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="64" width="56" height="20" forecolor="#FFFFFF" uuid="75b6e9a7-61a7-4dce-b80b-88689cf96103"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Malgun Gothic Semilight" size="12"/>
+				</textElement>
+				<text><![CDATA[Telepon :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="122" y="65" width="100" height="20" forecolor="#FFFFFF" uuid="12110921-1ac9-4c44-b798-8c36c97f7cc0"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Malgun Gothic Semilight" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datakaryawan_notelp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="103" width="123" height="36" forecolor="#FFFFFF" uuid="5f847dd5-67fa-4ca2-b950-50fbd06f320e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Malgun Gothic Semilight" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datakaryawan_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="155" width="155" height="29" forecolor="#FFFFFF" uuid="33b9d043-6b81-4da4-8e6c-40bed0b3253b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Malgun Gothic Semilight" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datakaryawan_nm_karyawan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>

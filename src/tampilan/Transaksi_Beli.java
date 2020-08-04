@@ -311,9 +311,7 @@ public class Transaksi_Beli extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel2.setPreferredSize(new java.awt.Dimension(169, 172));
 
-        bttambah.setBackground(new java.awt.Color(255, 255, 255));
         bttambah.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        bttambah.setForeground(new java.awt.Color(0, 0, 0));
         bttambah.setText("Tambah");
         bttambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,9 +319,7 @@ public class Transaksi_Beli extends javax.swing.JFrame {
             }
         });
 
-        btubah.setBackground(new java.awt.Color(255, 255, 255));
         btubah.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        btubah.setForeground(new java.awt.Color(0, 0, 0));
         btubah.setText("Ubah");
         btubah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -331,9 +327,7 @@ public class Transaksi_Beli extends javax.swing.JFrame {
             }
         });
 
-        bthapus.setBackground(new java.awt.Color(255, 255, 255));
         bthapus.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        bthapus.setForeground(new java.awt.Color(0, 0, 0));
         bthapus.setText("Hapus");
         bthapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -341,9 +335,7 @@ public class Transaksi_Beli extends javax.swing.JFrame {
             }
         });
 
-        btbatal.setBackground(new java.awt.Color(255, 255, 255));
         btbatal.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        btbatal.setForeground(new java.awt.Color(0, 0, 0));
         btbatal.setText("Batal");
         btbatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -361,8 +353,8 @@ public class Transaksi_Beli extends javax.swing.JFrame {
                     .addComponent(btbatal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bttambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btubah, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btubah, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(bthapus)))
                 .addContainerGap())
         );
@@ -382,8 +374,6 @@ public class Transaksi_Beli extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 110, -1, 153));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Beranda");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

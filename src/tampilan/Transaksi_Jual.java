@@ -167,6 +167,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
         notelp = new javax.swing.JLabel();
         txttelp = new javax.swing.JTextField();
         btntambah = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         txtnama1 = new javax.swing.JLabel();
         btubah = new javax.swing.JButton();
         bthapus = new javax.swing.JButton();
@@ -247,9 +248,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
         txtkode.setForeground(new java.awt.Color(255, 255, 255));
         txtkode.setText("Kode");
 
-        pilihbarang.setBackground(new java.awt.Color(255, 255, 255));
-        pilihbarang.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        pilihbarang.setForeground(new java.awt.Color(0, 0, 0));
+        pilihbarang.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         pilihbarang.setText("Pilih");
         pilihbarang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,9 +278,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
 
         jumlah.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
 
-        bttambah.setBackground(new java.awt.Color(255, 255, 255));
         bttambah.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        bttambah.setForeground(new java.awt.Color(0, 0, 0));
         bttambah.setText("Tambah");
         bttambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,9 +286,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
             }
         });
 
-        btbatal.setBackground(new java.awt.Color(255, 255, 255));
         btbatal.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        btbatal.setForeground(new java.awt.Color(0, 0, 0));
         btbatal.setText("Batal");
         btbatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,7 +307,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
                         .addComponent(txtkode, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pilihbarang)
-                        .addContainerGap(100, Short.MAX_VALUE))
+                        .addContainerGap(106, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(namabarang, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -385,13 +380,18 @@ public class Transaksi_Jual extends javax.swing.JFrame {
         txttelp.setBackground(new java.awt.Color(255, 255, 255));
         txttelp.setForeground(new java.awt.Color(0, 0, 0));
 
-        btntambah.setBackground(new java.awt.Color(255, 255, 255));
         btntambah.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        btntambah.setForeground(new java.awt.Color(0, 0, 0));
         btntambah.setText("Tambah");
         btntambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntambahActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Baru");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -407,19 +407,22 @@ public class Transaksi_Jual extends javax.swing.JFrame {
                     .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btntambah)
                     .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btntambah)
                     .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txttelp, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addGap(7, 7, 7)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nama, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -430,7 +433,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
                     .addComponent(txttelp, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btntambah, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 115, 370, 175));
@@ -440,9 +443,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
         txtnama1.setText("Total Bayar");
         jPanel1.add(txtnama1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 372, 70, 22));
 
-        btubah.setBackground(new java.awt.Color(255, 255, 255));
         btubah.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        btubah.setForeground(new java.awt.Color(0, 0, 0));
         btubah.setText("Ubah");
         btubah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -451,9 +452,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
         });
         jPanel1.add(btubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 310, 78, 30));
 
-        bthapus.setBackground(new java.awt.Color(255, 255, 255));
         bthapus.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        bthapus.setForeground(new java.awt.Color(0, 0, 0));
         bthapus.setText("Hapus");
         bthapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -462,9 +461,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
         });
         jPanel1.add(bthapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 310, 78, 30));
 
-        btcetak.setBackground(new java.awt.Color(255, 255, 255));
         btcetak.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        btcetak.setForeground(new java.awt.Color(0, 0, 0));
         btcetak.setText("Cetak");
         btcetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -640,6 +637,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
     private void btcetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btcetakActionPerformed
         Map param = new HashMap();
         param.put("no", txtno.getText());
+        param.put("nama", txtnama.getText());
         try {
                 File x = new File("src/Laporan/nota.jrxml");
                 JasperReport y = JasperCompileManager.compileReport(x.getAbsolutePath());
@@ -883,6 +881,12 @@ public class Transaksi_Jual extends javax.swing.JFrame {
         n.setVisible(true);
     }//GEN-LAST:event_tJualActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        IdPelanggan();
+        txtnama.setText("");
+        txttelp.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void Total(){
         DefaultTableModel dataModel = (DefaultTableModel) tblpesan.getModel();
         int jumlahBaris = tblpesan.getRowCount();
@@ -951,6 +955,7 @@ public class Transaksi_Jual extends javax.swing.JFrame {
     private javax.swing.JMenu data;
     private javax.swing.JLabel harga;
     private javax.swing.JLabel id;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

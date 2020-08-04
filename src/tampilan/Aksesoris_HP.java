@@ -15,7 +15,8 @@ public class Aksesoris_HP {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        fromlogin1 a = new fromlogin1();
+        a.setVisible(true);
     }
     
 }

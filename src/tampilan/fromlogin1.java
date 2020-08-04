@@ -2,16 +2,42 @@ package tampilan;
 
 import java.awt.Color;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import koneksi.koneksi;
 
 
 public class fromlogin1 extends javax.swing.JFrame {
-
+private Connection conn = new koneksi().connect();
     koneksi a;
     int dragxmouse;
     int dragymouse;
+    
+    private void login(){
+        try {
+            //String pass = new String(lpass.getPassword());
+            java.sql.Statement stat = conn.createStatement();
+            String sql = "select*from login where  nama = '"+user.getText()+"' and password = '"+lpass.getText()+"'";
+            ResultSet as = stat.executeQuery(sql);
+                if(as.next()){
+                    if(lpass.getText().equals(as.getString("password"))){
+                        JOptionPane.showMessageDialog(null, "Login Berhasil");
+                        Menu menu = new Menu();
+                        menu.setVisible(true);
+                        this.dispose();
+                    } else  {
+                        JOptionPane.showMessageDialog(rootPane,"Password Salah! silahkan coba lagi");
+                        lpass.setText("");
+                        lpass.requestFocus(); 
+                    }   
+                } else {
+                    JOptionPane.showMessageDialog(null, "Login Gagal!!  Silahkan coba lagi");
+                }
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     
     public fromlogin1() {
         initComponents();
@@ -117,24 +143,25 @@ public class fromlogin1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseDragged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aksesoris","root","");
-            ResultSet as = con.createStatement().executeQuery("select * from login where uname ='"
-                    +user.getText()+"' and pass='"+String.valueOf(lpass.getText()+"'"));
-                if(as.next()){
-                    javax.swing.JOptionPane.showMessageDialog(null,"Login sukses","Info",
-                            javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                    Menu m = new Menu();
-                    m.setVisible(true);
-                    this.dispose();
-                }else
-                javax.swing.JOptionPane.showMessageDialog(null,"Username tidak dikenal","Info",
-                        javax.swing.JOptionPane.ERROR_MESSAGE);
-                user.setText("");
-                lpass.setText("");
-                user.requestFocus();
-        } catch (Exception e) {
-        }
+//       try {
+//            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aksesoris","root","");
+//            ResultSet as = con.createStatement().executeQuery("select * from login where uname ='"
+//                    +user.getText()+"' and pass='"+String.valueOf(lpass.getText()+"'"));
+//                if(as.next()){
+//                    javax.swing.JOptionPane.showMessageDialog(null,"Login sukses","Info",
+//                            javax.swing.JOptionPane.INFORMATION_MESSAGE);
+//                    Menu m = new Menu();
+//                    m.setVisible(true);
+//                    this.dispose();
+//                }else
+//                javax.swing.JOptionPane.showMessageDialog(null,"Username tidak dikenal","Info",
+//                        javax.swing.JOptionPane.ERROR_MESSAGE);
+//                user.setText("");
+//                lpass.setText("");
+//                user.requestFocus();
+//        } catch (Exception e) {
+//        }
+        login();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void userKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userKeyPressed
@@ -144,25 +171,26 @@ public class fromlogin1 extends javax.swing.JFrame {
     }//GEN-LAST:event_userKeyPressed
 
     private void lpassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lpassKeyPressed
-         if(evt.getKeyCode()==evt.VK_ENTER) {
-            if(user.getText().equals("admin") &&
-                lpass.getText().equals("admin")) {
-                javax.swing.JOptionPane.showMessageDialog(null,
-                    "Anda berhasil masuk",
-                    "Konfirmasi",
-                    javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                new Menu().setVisible(true);
-                dispose();
-            }
-            else {
-                javax.swing.JOptionPane.showMessageDialog(null,
-                    "User anda tidak dikenal",
-                    "Kesalahan",
-                    javax.swing.JOptionPane.ERROR_MESSAGE);
-                user.setText("");
-                lpass.requestFocus();
-            }
-        }
+         if(evt.getKeyCode()==evt.VK_ENTER)
+//            if(user.getText().equals("admin") &&
+//                lpass.getText().equals("admin")) {
+//                javax.swing.JOptionPane.showMessageDialog(null,
+//                    "Anda berhasil masuk",
+//                    "Konfirmasi",
+//                    javax.swing.JOptionPane.INFORMATION_MESSAGE);
+//                new Menu().setVisible(true);
+//                dispose();
+//            }
+//            else {
+//                javax.swing.JOptionPane.showMessageDialog(null,
+//                    "User anda tidak dikenal",
+//                    "Kesalahan",
+//                    javax.swing.JOptionPane.ERROR_MESSAGE);
+//                user.setText("");
+//                lpass.requestFocus();
+//            }
+//        }
+        login();
     }//GEN-LAST:event_lpassKeyPressed
 
     /**
